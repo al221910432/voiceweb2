@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+
+<div class="container">
+
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput">Suburbio</label>
+            <input type="text" class="form-control" placeholder="Suburbio" formControlName="suburb">
+        </div><br>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput">Calle</label>
+            <input type="text" class="form-control" placeholder="Calle" formControlName="street">
+        </div><br>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput">Numero de calle</label>
+            <input type="text" class="form-control" placeholder="Numero de calle" formControlName="street_numer">
+        </div><br>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput">Numero de casa</label>
+            <input type="text" class="form-control" placeholder="Numero de casa" formControlName="home_number">
+        </div><br>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput">Referencias</label>
+            <input type="text" class="form-control" placeholder="Referencias" formControlName="references">
+        </div><br>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput">Id de municipio</label>
+            <input type="text" class="form-control" placeholder="Id de municipio" formControlName="municipality_id">
+        </div><br>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+
+    </form>
+</div>
+
+<app-footer></app-footer>

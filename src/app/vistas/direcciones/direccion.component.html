@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+
+    <h3>Lista de Direcciones</h3><br>
+
+    <button type="button" class="btn btn-primary" (click)="nuevaDireccion()">Nueva Direccion</button>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Suburbio</th>
+        <th scope="col">Calle</th>
+        <th scope="col">N.de calle</th>
+        <th scope="col">N.de casa</th>
+        <th scope="col">Referencias</th>
+        <th scope="col">Municipio_Id</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let direccion of direcciones" (click)="editarDireccion(direccion.id)">
+        <th scope="row">{{ direccion.id }}</th>
+        <td>{{ direccion.suburb }}</td>
+        <td>{{ direccion.street }}</td>
+        <td>{{ direccion.street_numer }}</td>
+        <td>{{ direccion.home_number }}</td>
+        <td>{{ direccion.references }}</td>
+        <td>{{ direccion.municipality_id }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<app-footer></app-footer>
